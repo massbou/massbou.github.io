@@ -1,0 +1,243 @@
+@import 'colors'
+
+
+*
+    -webkit-transition: all 400ms ease-in-out
+    -moz-transition: all 400ms ease-in-out
+    -ms-transition: all 400ms ease-in-out
+    transition: all 400ms ease-in-out
+
+html
+    overflow-x: hidden
+
+body
+    left: 0
+    margin: 0
+    padding: 0
+    height: 3000px
+    width: 100vw
+    overflow-x: hidden
+
+    background:
+        color : $blue
+        image : url(../pics/noise.png)
+
+.bg_comp
+    display: inline-block
+    height: 1050px
+    padding: 0
+    margin: 90px auto 0
+
+    right: 0
+    left: 0
+    position: absolute
+    z-index: 0
+
+.bi_comp
+    width: 100%
+    height: 800px
+    background-size: cover
+    background-color: pink !important
+
+
+.footer
+    position: absolute
+    height: 300px
+    width: 100vw
+    bottom: 0
+    background:
+        color: $black
+
+.presentation
+    display: block
+    //background: pink
+    margin: 50px auto 0
+    text-align: center
+    color: $white
+    z-index: 1
+
+    p
+        width: 50vw
+        font-size: 1.5em
+        font-family: 'Open Sans'
+        margin: 0 auto
+        text-align: center
+        text-transform: uppercase
+
+        .h2
+            text-transform: uppercase
+            font-family: 'Poiret One'
+            font-size: 2em
+            color: $white
+            font-weight: bolder
+
+    h1
+        padding: 20px auto
+        text-transform: uppercase
+        font-family: 'Poiret One'
+        font-size: 4em
+        color: $black
+        font-weight: bold
+
+header
+    padding: 0 10px
+    margin: 0
+    top: 0
+    width: 100%
+    height: 7vw
+    background: $white
+    font-family: 'Open Sans'
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    overflow-x: hidden
+    transition: all 0.6s ease-in-out
+    position: fixed
+    z-index: 10
+
+    nav
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        text-transform: uppercase
+
+        .logo
+            height: 6vw
+            width: 6vw
+            padding: 0 15px
+            order: 4
+
+
+        a:link, a:visited
+            text-decoration: none
+            color: rgba(35,34,31,0.5)
+            font-weight: bold
+
+
+        [class^="link_"]
+            font-size: 17pt
+            list-style: none
+            padding: 0 20px
+            height: 100%
+            box-sizing: border-box
+
+            a
+                display: block
+                height: 100%
+                box-sizing: border-box
+
+                section
+                    position: relative
+                    top: 50%
+                    transform: translate(0, -50%)
+
+                &:hover, &:active, &:focus
+                    transition: all 100ms ease-in-out
+                    color: rgba(35,34,31,1)
+
+
+
+            &.link_accueil
+                order: 1
+            &.link_presentation
+                order: 2
+            &.link_equipe
+                order: 3
+            &.link_services
+                order: 5
+            &.link_clients
+                order: 6
+            &.link_contact
+                order: 7
+
+        hr
+            display: none
+            color: $white
+            width: 180px
+            margin: 1px auto
+
+        .icon-close
+            display: none
+
+
+
+
+#monter
+    position: fixed
+    bottom: 30px
+    right: 30px
+    display: none
+    a
+        img
+            width: 70px
+            height: auto
+            opacity: 0.7
+
+            &:hover
+                opacity: 1
+
+
+
+.logo2
+    height: 3vw
+    width: 3vw
+    min-width: 40px
+    min-height: 40px
+    padding: 0 15px
+    order: 4
+
+.small
+    font-size: 11pt !important
+    font-weight: 900
+
+.head2
+    padding: 0 10px
+    margin: 0
+    position: absolute
+    width: 100%
+    height: 4vw
+    min-height: 55px
+    background: darken($whitetrans, 5%)
+    font-family: 'Open Sans'
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    overflow-x: hidden
+    transition: all 0.3s linear 0s
+    position: fixed
+    z-index: 11
+
+    [class^="link_"]
+        font-size: 17pt
+        list-style: none
+        padding: 0 20px
+        height: 100%
+        box-sizing: border-box
+
+        a
+            display: block
+            height: 100%
+            box-sizing: border-box
+
+            section
+                position: relative
+                top: 50%
+                transform: translate(0, -50%)
+
+            &:hover, &:active, &:focus
+                border-bottom: 4px solid rgba(35,34,31,1)
+                border-top: 4px solid transparent
+                color: rgba(35,34,31,1)
+                transition: all 100ms ease
+
+.icon-menu
+    display: none
